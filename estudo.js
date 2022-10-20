@@ -31,8 +31,32 @@ function calcula(){
     let val = document.getElementById("valor").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
-    let res = val * (1+(j/100));
 
+    if(!Number(val)){
+        alert("O valor deve ser um número.");
+        document.getElementById("valor").value = "";
+        document.getElementById("valor").focus();
+        return
+    }
+    if(!Number(j)){
+        alert("O valor deve ser um juros.");
+        document.getElementById("juros").value = "";
+        document.getElementById("juros").focus();
+        return
+    }
+     if(!Number(t)){
+        alert("O valor deve ser um mes.");
+        document.getElementById("meses").value = "";
+        document.getElementById("meses").focus();
+        return
+    }
+
+    let res = val;
+    for(let m=1; m <= t;m++){
+        res = val * (1+(j/100));
+        val = res;
+        document.write("Mês " + m + " = " + res + "<br>");
+    }
     document.write("Resultado: "+res);
 }
 
@@ -61,5 +85,3 @@ function fecharNotas(){
     r = 180 - r;
     document.getElementById("resultadofechar").innerHTML = "Falta: " + r;
 }
-
-
