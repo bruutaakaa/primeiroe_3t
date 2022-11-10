@@ -11,7 +11,22 @@ body {
     text-align: center;
     box-shadow: 10px 10px rgb(8, 8, 82);
 }
+.calculadoraESG {
+    background: rgb(172, 172, 255);
+    width: 190px;
+    color: rgb(0, 4, 54);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 10px 10px rgb(8, 8, 82);
+}
 .calculadora input {
+    background: pink;
+    color: rebeccapurple;
+    border-radius: 10px;
+    padding: 4px;
+}
+.calculadoraESG input {
     background: pink;
     color: rebeccapurple;
     border-radius: 10px;
@@ -20,14 +35,26 @@ body {
 .calcF {
     display: none;
 }
+.calcE {
+    display: none;
+}
 #calcFin{
+    display: none;
+}
+#calcESG{
     display: none;
 }
 #calcFin:checked + .calculadora .calcF {
     display: block;
 }
-
+#calcESG:checked + .calculadora .calcE {
+    display: block;
+}
 .calculadora input:focus{
+    background: rgb(236, 25, 191);
+    color: rgb(35, 21, 87);
+}
+.calculadoraESG input:focus{
     background: rgb(236, 25, 191);
     color: rgb(35, 21, 87);
 }
@@ -36,7 +63,17 @@ body {
     margin-top: 20px;
     padding: 5px;
 }
+#btnCalcESG {
+    background: rgb(73, 60, 133);
+    margin-top: 20px;
+    padding: 5px;
+}
 #btnCalc:hover {
+    background: pink;
+    color: rebeccapurple;
+    cursor: pointer;
+}
+#btnCalcESG:hover {
     background: pink;
     color: rebeccapurple;
     cursor: pointer;
